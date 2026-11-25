@@ -1,0 +1,1098 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Muhamad Syaiful Islam — Creative & Graphic Design Portfolio</title>
+
+  <!-- SEO & Social Sharing -->
+  <meta name="description" content="Portofolio kreatif Muhamad Syaiful Islam — desain grafis, ilustrasi manual (nirmana & zentangle), 3D modeling, branding, dan desain publikasi. Siswa DKV SMKN 10 Surabaya." />
+  <meta name="author" content="Muhamad Syaiful Islam" />
+  <meta name="theme-color" content="#181818" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Muhamad Syaiful Islam — Creative & Graphic Design Portfolio" />
+  <meta property="og:description" content="Kumpulan karya desain grafis, ilustrasi manual, 3D modeling, dan desain publikasi Muhamad Syaiful Islam." />
+  <meta property="og:image" content="nirmana-gorilla.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Muhamad Syaiful Islam — Creative & Graphic Design Portfolio" />
+  <meta name="twitter:description" content="Kumpulan karya desain grafis, ilustrasi manual, 3D modeling, dan desain publikasi Muhamad Syaiful Islam." />
+  <meta name="twitter:image" content="nirmana-gorilla.png" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts: Anton / Oswald (Display), Plus Jakarta Sans (Body), Caveat (Editorial Script) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Caveat:wght@700&family=Oswald:wght@500;700&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome for crisp UI & Social Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            cream: '#F6F3EE',
+            creamDark: '#ECE6DC',
+            charcoal: '#181818',
+            taupeLight: '#D8D0C5',
+            taupeDark: '#6E675F',
+            terracotta: '#D94E1F',
+            terracottaDark: '#9E310E',
+          },
+          fontFamily: {
+            display: ['Anton', 'Oswald', 'sans-serif'],
+            heading: ['Oswald', 'sans-serif'],
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+            script: ['Caveat', 'cursive'],
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    /* Base Editorial Styling */
+    body {
+      background-color: #F6F3EE;
+      color: #181818;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      overflow-x: hidden;
+    }
+
+    /* Hollow Outlined Display Text (Ref 1 & Ref 2 Blend) */
+    .text-stroke-dark {
+      color: transparent;
+      -webkit-text-stroke: 2.2px #181818;
+    }
+    @media (min-width: 768px) {
+      .text-stroke-dark {
+        -webkit-text-stroke: 3px #181818;
+      }
+    }
+
+    /* Subtle Paper Grain Texture */
+    .paper-bg {
+      background-image: radial-gradient(rgba(24, 24, 24, 0.045) 1px, transparent 0);
+      background-size: 20px 20px;
+    }
+
+    /* Artwork Photo Rendering */
+    #modal-visual img {
+      object-fit: contain;
+      background-color: #FFFFFF;
+    }
+
+    /* 3D Floating Animation for Burnt-Orange Decorative Elements (Ref 1) */
+    @keyframes floatSlow {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(-10px) rotate(3deg); }
+    }
+    @keyframes floatReverse {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(9px) rotate(-4deg); }
+    }
+    .animate-float-slow {
+      animation: floatSlow 5.5s ease-in-out infinite;
+    }
+    .animate-float-reverse {
+      animation: floatReverse 6.5s ease-in-out infinite;
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 9px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #F6F3EE;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #6E675F;
+      border-radius: 9999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #D94E1F;
+    }
+  </style>
+</head>
+<body class="paper-bg antialiased selection:bg-terracotta selection:text-white">
+
+  <!-- Toast Notification (Replaces alert() for Copy-to-Clipboard & Photo Upload) -->
+  <div id="toast" class="fixed bottom-6 right-6 z-50 translate-y-24 opacity-0 transition-all duration-300 pointer-events-none">
+    <div class="bg-charcoal text-cream px-5 py-3.5 rounded-2xl shadow-2xl border border-white/10 flex items-center gap-3 text-sm font-medium">
+      <span class="w-6 h-6 rounded-full bg-terracotta flex items-center justify-center text-white text-xs">
+        <i class="fa-solid fa-check"></i>
+      </span>
+      <span id="toast-message">Berhasil disalin ke clipboard!</span>
+    </div>
+  </div>
+
+  <!-- Top Navigation Bar (Ref 2 Clean Editorial Nav) -->
+  <header class="sticky top-0 z-40 bg-cream/90 backdrop-blur-md border-b border-charcoal/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8 h-16 sm:h-20 flex items-center justify-between">
+      <!-- Brand Monogram -->
+      <a href="#top" class="flex items-center gap-2.5 group">
+        <span class="w-9 h-9 rounded-full bg-charcoal text-cream font-display text-lg flex items-center justify-center tracking-wider group-hover:bg-terracotta transition-colors">
+          MSI
+        </span>
+        <span class="font-heading font-bold tracking-wider uppercase text-sm sm:text-base hidden sm:inline">
+          Syaiful Islam
+        </span>
+      </a>
+
+      <!-- Desktop Navigation Links (Ref 2 Spacing & Caps) -->
+      <nav class="hidden md:flex items-center gap-8 lg:gap-11 text-xs lg:text-sm font-bold tracking-[0.18em] uppercase text-charcoal">
+        <a href="#about" class="hover:text-terracotta transition-colors py-2">About Me</a>
+        <a href="#experience" class="hover:text-terracotta transition-colors py-2">Experience</a>
+        <a href="#works" onclick="setFilter('school')" class="hover:text-terracotta transition-colors py-2">School Work</a>
+        <a href="#works" onclick="setFilter('organizational')" class="hover:text-terracotta transition-colors py-2">Organizational</a>
+        <a href="#contact" class="hover:text-terracotta transition-colors py-2">Contact</a>
+      </nav>
+
+      <!-- Action Button & Mobile Menu Toggle -->
+      <div class="flex items-center gap-3">
+        <button id="mobile-menu-btn" aria-label="Buka Menu" class="md:hidden p-2.5 rounded-xl bg-charcoal text-cream hover:bg-terracotta transition-colors">
+          <i class="fa-solid fa-bars text-base"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Navigation -->
+    <div id="mobile-menu" class="hidden md:hidden bg-cream border-b border-charcoal/15 px-6 py-4 space-y-2">
+      <a href="#about" class="block py-2.5 text-sm font-bold tracking-widest uppercase hover:text-terracotta">About Me</a>
+      <a href="#experience" class="block py-2.5 text-sm font-bold tracking-widest uppercase hover:text-terracotta">Experience</a>
+      <a href="#works" onclick="setFilter('school')" class="block py-2.5 text-sm font-bold tracking-widest uppercase hover:text-terracotta">School Work</a>
+      <a href="#works" onclick="setFilter('organizational')" class="block py-2.5 text-sm font-bold tracking-widest uppercase hover:text-terracotta">Organizational</a>
+      <a href="#contact" class="block py-2.5 text-sm font-bold tracking-widest uppercase text-terracotta">Contact & PKL</a>
+    </div>
+  </header>
+
+  <!-- HERO SECTION (Ref 1 3D Burnt-Orange Accents + Ref 2 Stacked Editorial Typography & Portrait Overlap) -->
+  <section id="top" class="relative pt-8 pb-16 sm:pt-12 sm:pb-24 overflow-hidden">
+    <!-- 3D Burnt-Orange Decorative SVG: Top-Left Wavy Squiggle (Ref 1) -->
+    <svg class="animate-float-slow absolute -top-2 -left-6 sm:left-4 w-36 sm:w-52 h-28 sm:h-36 pointer-events-none z-10 drop-shadow-xl" viewBox="0 0 240 140" fill="none">
+      <defs>
+        <linearGradient id="squiggleGrad" x1="0" y1="0" x2="240" y2="140" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stop-color="#FF7847" />
+          <stop offset="50%" stop-color="#D94E1F" />
+          <stop offset="100%" stop-color="#8A2406" />
+        </linearGradient>
+      </defs>
+      <path d="M12 72C26 24 54 24 68 72C82 120 110 120 124 72C138 24 166 24 180 72C194 120 214 106 226 76" stroke="url(#squiggleGrad)" stroke-width="22" stroke-linecap="round" />
+      <path d="M12 67C26 19 54 19 68 67C82 115 110 115 124 67C138 19 166 19 180 67C194 115 214 101 226 71" stroke="#FF9B73" stroke-width="4" stroke-linecap="round" opacity="0.55" />
+    </svg>
+
+    <!-- 3D Burnt-Orange Sphere: Top-Right (Ref 1) -->
+    <svg class="animate-float-reverse absolute top-8 right-6 sm:right-16 w-12 h-12 sm:w-16 sm:h-16 pointer-events-none z-10 drop-shadow-lg" viewBox="0 0 80 80">
+      <defs>
+        <radialGradient id="sphereGrad1" cx="32%" cy="28%" r="68%">
+          <stop offset="0%" stop-color="#FF976E" />
+          <stop offset="55%" stop-color="#D94E1F" />
+          <stop offset="100%" stop-color="#7D1F04" />
+        </radialGradient>
+      </defs>
+      <circle cx="40" cy="40" r="34" fill="url(#sphereGrad1)" />
+    </svg>
+
+    <!-- 3D Burnt-Orange Floating Small Sphere: Mid-Left (Ref 1) -->
+    <svg class="animate-float-slow hidden md:block absolute top-1/2 left-16 lg:left-28 w-10 h-10 pointer-events-none z-10 drop-shadow-md" viewBox="0 0 80 80">
+      <circle cx="40" cy="40" r="32" fill="url(#sphereGrad1)" />
+    </svg>
+
+    <!-- 3D Burnt-Orange Spiral Coil: Mid-Right (Ref 1) -->
+    <svg class="animate-float-reverse absolute bottom-10 -right-8 sm:right-6 lg:right-14 w-44 sm:w-64 h-36 sm:h-48 pointer-events-none z-20 drop-shadow-2xl" viewBox="0 0 280 180" fill="none">
+      <defs>
+        <linearGradient id="coilGrad" x1="20" y1="20" x2="260" y2="160" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stop-color="#FF8354" />
+          <stop offset="50%" stop-color="#D94E1F" />
+          <stop offset="100%" stop-color="#7C1E03" />
+        </linearGradient>
+      </defs>
+      <path d="M24 132C62 122 98 84 88 52C78 24 44 42 54 78C66 118 134 114 148 68C160 28 122 22 118 62C114 106 184 116 206 68C222 32 184 18 176 58C168 100 226 114 256 76" stroke="url(#coilGrad)" stroke-width="22" stroke-linecap="round" />
+      <path d="M24 127C62 117 98 79 88 47C78 19 44 37 54 73C66 113 134 109 148 63C160 23 122 17 118 57C114 101 184 111 206 63C222 27 184 13 176 53C168 95 226 109 256 71" stroke="#FFA682" stroke-width="3.5" stroke-linecap="round" opacity="0.5" />
+    </svg>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-8 relative">
+      <!-- Massive Stacked Display Typography (Ref 1 & Ref 2) -->
+      <div class="relative text-center select-none pt-4 sm:pt-2">
+        <!-- Editorial Script Accent ("Syaiful's" like "Jade's" in Ref 2) -->
+        <div class="relative inline-block">
+          <span class="font-script text-4xl sm:text-6xl md:text-7xl text-terracotta -rotate-6 inline-block sm:absolute sm:-top-7 sm:-left-16 md:-left-24 z-20 drop-shadow-sm">
+            Syaiful’s
+          </span>
+          <h1 class="font-display uppercase tracking-tight leading-[0.88] text-[4.1rem] sm:text-[6.8rem] md:text-[8.8rem] lg:text-[10.8rem] text-charcoal">
+            GRAPHIC &amp;
+          </h1>
+        </div>
+
+        <!-- Hollow Outlined Second Line ("CREATIVE DESIGNER" / "PORTFOLIO") -->
+        <div class="font-display uppercase tracking-tight leading-[0.88] text-[3.5rem] sm:text-[6rem] md:text-[7.8rem] lg:text-[9.6rem] text-stroke-dark mt-1 sm:mt-0">
+          PORTFOLIO
+        </div>
+      </div>
+
+      <!-- Central Hero Layout: Left CTA/Arrow (Ref 1), Center Portrait Overlapping Typography, Right Identity Tag -->
+      <div class="relative z-10 -mt-6 sm:-mt-16 md:-mt-24 grid grid-cols-1 lg:grid-cols-12 items-end gap-8">
+        
+        <!-- Left Column: Downward Outline Arrow + Pill CTA Button (Ref 1) -->
+        <div class="lg:col-span-4 flex flex-col items-center lg:items-start text-center lg:text-left order-2 lg:order-1 pb-2">
+          <!-- Outline Down Arrow SVG from Ref 1 -->
+          <a href="#works" aria-label="Scroll ke Karya" class="group mb-5 inline-flex flex-col items-center">
+            <svg class="w-12 h-14 text-charcoal group-hover:text-terracotta group-hover:translate-y-1.5 transition-all duration-300" viewBox="0 0 48 56" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M24 4V46M24 46L8 30M24 46L40 30" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </a>
+
+          <p class="text-sm sm:text-base text-charcoal/80 max-w-xs mb-5 leading-relaxed font-medium">
+            Desain grafis, fotografi, videografi, &amp; aset 3D yang komunikatif, berkarakter, dan siap memberi dampak visual.
+          </p>
+
+          <div class="flex flex-wrap items-center justify-center lg:justify-start gap-3">
+            <a href="#works" class="bg-charcoal text-cream hover:bg-terracotta transition-all duration-300 px-7 py-3.5 rounded-full font-heading uppercase tracking-[0.18em] text-sm font-bold shadow-lg hover:shadow-xl">
+              Explore Portfolio
+            </a>
+            <a href="#contact" class="border-2 border-charcoal text-charcoal hover:bg-charcoal hover:text-cream transition-all duration-300 px-6 py-3 rounded-full font-heading uppercase tracking-[0.15em] text-sm font-bold">
+              Hubungi Saya
+            </a>
+          </div>
+        </div>
+
+        <!-- Center Column: Overlapping Editorial Portrait Card (Ref 1 Halftone/Watercolor + Ref 2 Cutout Frame) -->
+        <div class="lg:col-span-4 flex flex-col items-center order-1 lg:order-2">
+          <div class="relative w-64 sm:w-72 md:w-80">
+            <!-- Halftone & Warm Watercolor Aura Behind Portrait (Inspired by Ref 1 & PDF Page 2) -->
+            <div class="absolute -inset-3 rounded-[2.5rem] bg-gradient-to-b from-amber-200/70 via-terracotta/25 to-taupeLight/80 blur-md"></div>
+            <div class="relative rounded-[2.2rem] bg-taupeLight border-4 border-charcoal shadow-2xl overflow-hidden aspect-[4/5] flex flex-col items-center justify-end group">
+              
+              <!-- Halftone Dots Background Pattern -->
+              <svg class="absolute inset-0 w-full h-full opacity-25 pointer-events-none" viewBox="0 0 200 250">
+                <defs>
+                  <pattern id="halftone" x="0" y="0" width="12" height="12" patternUnits="userSpaceOnUse">
+                    <circle cx="4" cy="4" r="2.2" fill="#181818" />
+                  </pattern>
+                </defs>
+                <circle cx="100" cy="115" r="88" fill="url(#halftone)" />
+              </svg>
+
+              <!-- Portrait Image (Supports Custom Photo Upload or Styled Editorial SVG Avatar) -->
+              <img id="hero-photo-img" src="" alt="Foto Profil Muhamad Syaiful Islam" class="hidden relative z-10 w-full h-full object-cover object-top" />
+
+              <!-- Default Stylized Vector Portrait Illustration (SMK DKV Student Vibe) -->
+              <div id="hero-svg-avatar" class="relative z-10 w-full h-full flex flex-col items-center justify-end pt-6 px-4">
+                <svg class="w-full h-full max-h-[320px]" viewBox="0 0 260 310" fill="none">
+                  <!-- Shoulders / Uniform Shirt -->
+                  <path d="M36 310C38 250 72 226 130 226C188 226 222 250 224 310H36Z" fill="#FFFFFF" stroke="#181818" stroke-width="3.5" />
+                  <!-- Collar & Tie -->
+                  <path d="M104 226L130 256L156 226" fill="#F6F3EE" stroke="#181818" stroke-width="3" />
+                  <path d="M123 246L137 246L141 310H119L123 246Z" fill="#6E675F" stroke="#181818" stroke-width="2.5" />
+                  <!-- Merah Putih Badge on Pocket -->
+                  <rect x="76" y="256" width="22" height="7" rx="1.5" fill="#D94E1F" stroke="#181818" stroke-width="1.5" />
+                  <rect x="76" y="263" width="22" height="7" rx="1.5" fill="#FFFFFF" stroke="#181818" stroke-width="1.5" />
+                  <!-- Neck -->
+                  <path d="M111 188H149V232C149 240 111 240 111 232V188Z" fill="#D89B74" stroke="#181818" stroke-width="3" />
+                  <!-- Ears -->
+                  <ellipse cx="83" cy="144" rx="9" ry="15" fill="#D89B74" stroke="#181818" stroke-width="3" />
+                  <ellipse cx="177" cy="144" rx="9" ry="15" fill="#D89B74" stroke="#181818" stroke-width="3" />
+                  <!-- Face -->
+                  <path d="M86 122C86 92 174 92 174 122V152C174 184 152 202 130 202C108 202 86 184 86 152V122Z" fill="#E3A882" stroke="#181818" stroke-width="3.5" />
+                  <!-- Hair -->
+                  <path d="M82 128C78 96 96 72 132 72C168 72 182 96 178 128C174 110 162 102 146 104C132 106 116 102 102 106C90 110 85 118 82 128Z" fill="#181818" />
+                  <!-- Eyes & Smile -->
+                  <circle cx="110" cy="140" r="4.5" fill="#181818" />
+                  <circle cx="150" cy="140" r="4.5" fill="#181818" />
+                  <path d="M100 129C106 125 114 125 119 128" stroke="#181818" stroke-width="3" stroke-linecap="round" />
+                  <path d="M141 128C146 125 154 125 160 129" stroke="#181818" stroke-width="3" stroke-linecap="round" />
+                  <path d="M130 144V158L125 161" stroke="#181818" stroke-width="2.5" stroke-linecap="round" />
+                  <path d="M115 173C124 181 136 181 145 173" stroke="#181818" stroke-width="3" stroke-linecap="round" />
+                </svg>
+              </div>
+
+              <!-- Interactive Photo Upload Overlay Button (Lets Syaiful drop his real photo anytime!) -->
+              <label for="photo-upload-input" title="Ganti dengan foto asli Anda" class="cursor-pointer absolute top-3 right-3 z-20 bg-charcoal/85 hover:bg-terracotta text-cream text-[11px] font-bold px-3 py-1.5 rounded-full backdrop-blur-sm transition-colors flex items-center gap-1.5 shadow">
+                <i class="fa-solid fa-camera"></i>
+                <span>Ganti Foto</span>
+              </label>
+              <input id="photo-upload-input" type="file" accept="image/*" class="hidden" />
+
+              <!-- Floating Software Mini Badges at Bottom of Portrait (PDF Page 2 Detail) -->
+              <div class="absolute bottom-3 inset-x-3 z-20 flex items-center justify-center gap-2">
+                <span class="px-2.5 py-1 rounded-lg bg-[#310000] text-[#FF9A00] border border-[#FF9A00]/50 font-extrabold text-xs shadow">Ai</span>
+                <span class="px-2.5 py-1 rounded-lg bg-[#001E36] text-[#31A8FF] border border-[#31A8FF]/50 font-extrabold text-xs shadow">Ps</span>
+                <span class="px-2.5 py-1 rounded-full bg-gradient-to-r from-[#00C4CC] to-[#7D2AE8] text-white font-bold text-xs shadow">Canva</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Name & School Identity + Social Icons (Ref 1 + Ref 2) -->
+        <div class="lg:col-span-4 flex flex-col items-center lg:items-end text-center lg:text-right order-3 pb-2">
+          <span class="inline-block px-3.5 py-1 rounded-full bg-terracotta/15 text-terracotta font-bold text-xs uppercase tracking-widest mb-2">
+            Siswa Kelas XII • DKV
+          </span>
+          <h2 class="font-heading font-bold uppercase text-2xl sm:text-3xl tracking-wide text-charcoal">
+            MUHAMAD SYAIFUL ISLAM
+          </h2>
+          <p class="text-sm sm:text-base font-semibold text-taupeDark mt-1">
+            SMK Negeri 10 Surabaya
+          </p>
+
+          <!-- Social Media Quick Icons (Ref 2 Bottom-Right Hero Row) -->
+          <div class="flex items-center gap-3 mt-5">
+            <a href="https://instagram.com/m.saaiffffff" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="w-10 h-10 rounded-full bg-charcoal text-cream hover:bg-terracotta transition-colors flex items-center justify-center shadow">
+              <i class="fa-brands fa-instagram text-lg"></i>
+            </a>
+            <a href="https://wa.me/6285732117191" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" class="w-10 h-10 rounded-full bg-charcoal text-cream hover:bg-terracotta transition-colors flex items-center justify-center shadow">
+              <i class="fa-brands fa-whatsapp text-lg"></i>
+            </a>
+            <a href="mailto:sayaifulislam16@gmail.com" aria-label="Email" class="w-10 h-10 rounded-full bg-charcoal text-cream hover:bg-terracotta transition-colors flex items-center justify-center shadow">
+              <i class="fa-solid fa-envelope text-base"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT ME, EDUCATION & SOFTWARE/SKILLS SECTION (Ref 2 Split Editorial Panels + Ref 1 Rings & Pill Tags) -->
+  <section id="about" class="py-12 sm:py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8">
+        
+        <!-- Left Panel: "WHO AM I / ABOUT ME" (Ref 2 Dark Taupe Card Aesthetic) -->
+        <div class="lg:col-span-6 bg-taupeDark text-cream rounded-[2rem] p-7 sm:p-10 shadow-xl flex flex-col justify-between relative overflow-hidden">
+          <div class="relative z-10">
+            <div class="flex items-center justify-between gap-4 mb-5">
+              <h2 class="font-display uppercase text-4xl sm:text-5xl tracking-wide text-cream">
+                ABOUT ME
+              </h2>
+              <span class="font-script text-2xl sm:text-3xl text-amber-200 -rotate-3">
+                get to know me
+              </span>
+            </div>
+
+            <p class="text-cream/95 text-sm sm:text-base leading-relaxed mb-4">
+              Halo, saya <strong class="text-white font-bold">Muhamad Syaiful Islam</strong>, siswa <strong class="text-white font-bold">SMK Negeri 10 Surabaya</strong> kelas XII dari jurusan <strong class="text-amber-200 font-semibold">Desain Komunikasi Visual (DKV)</strong>.
+            </p>
+            <p class="text-cream/90 text-sm sm:text-base leading-relaxed mb-4">
+              Saya memiliki minat di bidang desain grafis, fotografi, videografi, dan pembuatan konten visual. Di waktu luang, saya senang berolahraga dan latihan fisik untuk menjaga fokus dan konsistensi.
+            </p>
+            <blockquote class="border-l-4 border-terracotta pl-4 py-1 my-5 bg-charcoal/25 rounded-r-xl text-cream/95 italic text-sm sm:text-base">
+              “Pedoman hidup saya adalah selalu berusaha untuk terus belajar, berkembang, dan bermanfaat bagi semua orang, karena sebaik-baiknya manusia adalah ia yang bermanfaat bagi orang lain.”
+            </blockquote>
+          </div>
+
+          <!-- Highlight Metrics Strip (Ref 2 Stats Style) -->
+          <div class="relative z-10 grid grid-cols-3 gap-3 pt-5 border-t border-cream/20 mt-4">
+            <div>
+              <div class="font-display text-2xl sm:text-3xl text-white">15+</div>
+              <div class="text-[11px] sm:text-xs uppercase tracking-wider text-cream/75">Karya Desain</div>
+            </div>
+            <div>
+              <div class="font-display text-2xl sm:text-3xl text-white">DKV</div>
+              <div class="text-[11px] sm:text-xs uppercase tracking-wider text-cream/75">SMKN 10 SBY</div>
+            </div>
+            <div>
+              <div class="font-display text-2xl sm:text-3xl text-white">100%</div>
+              <div class="text-[11px] sm:text-xs uppercase tracking-wider text-cream/75">Siap Kerja</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Panel: "EDUCATION, SOFTWARE SKILLS & CORE SKILLS" (Ref 1 + Ref 2 Qualifications Card) -->
+        <div class="lg:col-span-6 bg-taupeLight/80 border border-charcoal/10 rounded-[2rem] p-7 sm:p-10 shadow-lg flex flex-col justify-between">
+          <div>
+            <!-- Education Header (Ref 1 Icon + Heading) -->
+            <div class="flex items-center gap-3.5 mb-4">
+              <div class="w-11 h-11 rounded-full bg-charcoal text-cream flex items-center justify-center shrink-0">
+                <i class="fa-solid fa-graduation-cap text-lg"></i>
+              </div>
+              <div>
+                <h3 class="font-display uppercase text-2xl sm:text-3xl tracking-wide text-charcoal">
+                  EDUCATION
+                </h3>
+                <p class="text-xs font-bold uppercase tracking-widest text-terracotta">Pendidikan Saat Ini</p>
+              </div>
+            </div>
+
+            <div class="bg-cream rounded-2xl p-4 sm:p-5 border border-charcoal/10 mb-7">
+              <div class="flex flex-wrap items-center justify-between gap-2">
+                <h4 class="font-bold text-base sm:text-lg text-charcoal">SMK Negeri 10 Surabaya</h4>
+                <span class="px-3 py-1 rounded-full bg-charcoal text-cream text-xs font-bold">Kelas XII</span>
+              </div>
+              <p class="text-sm text-charcoal/80 font-medium mt-1">
+                Jurusan Desain Komunikasi Visual (DKV) — Fokus pada Komunikasi Visual, Ilustrasi, Branding, Fotografi &amp; Media Digital.
+              </p>
+            </div>
+
+            <!-- Software Skills (Ref 1 Style App Badges + Proficiency Rings) -->
+            <div class="mb-7">
+              <h3 class="font-heading font-bold uppercase text-lg tracking-wider text-charcoal mb-3.5 flex items-center gap-2">
+                <span>SOFTWARE SKILLS</span>
+                <span class="h-px flex-1 bg-charcoal/20"></span>
+              </h3>
+
+              <div class="grid grid-cols-3 gap-3 sm:gap-4">
+                <!-- Canva -->
+                <div class="bg-cream rounded-2xl p-3.5 text-center border border-charcoal/10 shadow-sm hover:-translate-y-1 transition-transform">
+                  <div class="w-12 h-12 mx-auto rounded-2xl bg-gradient-to-br from-[#00C4CC] to-[#7D2AE8] text-white font-extrabold text-sm flex items-center justify-center shadow mb-2">
+                    Canva
+                  </div>
+                  <div class="font-bold text-xs sm:text-sm text-charcoal">Canva</div>
+                  <div class="text-[11px] text-taupeDark font-semibold">Layout &amp; Sosmed</div>
+                </div>
+
+                <!-- Adobe Illustrator -->
+                <div class="bg-cream rounded-2xl p-3.5 text-center border border-charcoal/10 shadow-sm hover:-translate-y-1 transition-transform">
+                  <div class="w-12 h-12 mx-auto rounded-2xl bg-[#330000] text-[#FF9A00] border-2 border-[#FF9A00] font-extrabold text-base flex items-center justify-center shadow mb-2">
+                    Ai
+                  </div>
+                  <div class="font-bold text-xs sm:text-sm text-charcoal">Illustrator</div>
+                  <div class="text-[11px] text-taupeDark font-semibold">Vektor &amp; Logo</div>
+                </div>
+
+                <!-- Adobe Photoshop -->
+                <div class="bg-cream rounded-2xl p-3.5 text-center border border-charcoal/10 shadow-sm hover:-translate-y-1 transition-transform">
+                  <div class="w-12 h-12 mx-auto rounded-2xl bg-[#001E36] text-[#31A8FF] border-2 border-[#31A8FF] font-extrabold text-base flex items-center justify-center shadow mb-2">
+                    Ps
+                  </div>
+                  <div class="font-bold text-xs sm:text-sm text-charcoal">Photoshop</div>
+                  <div class="text-[11px] text-taupeDark font-semibold">Manipulasi &amp; Foto</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Core Skills Pill Tags (Ref 1 Rounded Pill Chips with Icons) -->
+          <div>
+            <h3 class="font-heading font-bold uppercase text-lg tracking-wider text-charcoal mb-3 flex items-center gap-2">
+              <span>KEAHLIAN &amp; MINAT</span>
+              <span class="h-px flex-1 bg-charcoal/20"></span>
+            </h3>
+            <div class="flex flex-wrap gap-2">
+              <span class="inline-flex items-center gap-2 bg-cream border border-charcoal/20 px-3.5 py-2 rounded-full text-xs font-bold text-charcoal">
+                <i class="fa-solid fa-pen-nib text-terracotta"></i> Desain Grafis
+              </span>
+              <span class="inline-flex items-center gap-2 bg-cream border border-charcoal/20 px-3.5 py-2 rounded-full text-xs font-bold text-charcoal">
+                <i class="fa-solid fa-camera text-terracotta"></i> Fotografi
+              </span>
+              <span class="inline-flex items-center gap-2 bg-cream border border-charcoal/20 px-3.5 py-2 rounded-full text-xs font-bold text-charcoal">
+                <i class="fa-solid fa-video text-terracotta"></i> Videografi
+              </span>
+              <span class="inline-flex items-center gap-2 bg-cream border border-charcoal/20 px-3.5 py-2 rounded-full text-xs font-bold text-charcoal">
+                <i class="fa-solid fa-wand-magic-sparkles text-terracotta"></i> Konten Visual
+              </span>
+              <span class="inline-flex items-center gap-2 bg-cream border border-charcoal/20 px-3.5 py-2 rounded-full text-xs font-bold text-charcoal">
+                <i class="fa-solid fa-compass-drafting text-terracotta"></i> Ilustrasi &amp; Zentangle
+              </span>
+              <span class="inline-flex items-center gap-2 bg-cream border border-charcoal/20 px-3.5 py-2 rounded-full text-xs font-bold text-charcoal">
+                <i class="fa-solid fa-cube text-terracotta"></i> Pemodelan 3D
+              </span>
+              <span class="inline-flex items-center gap-2 bg-cream border border-charcoal/20 px-3.5 py-2 rounded-full text-xs font-bold text-charcoal">
+                <i class="fa-solid fa-award text-terracotta"></i> Branding &amp; Logo
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MY EXPERIENCE SECTION (Ref 1 Clean Divider Header + Circular Dark Icon Badges) -->
+  <section id="experience" class="py-12 sm:py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8">
+      <!-- Section Header with Horizontal Lines (Ref 1 "WORK EXPERIENCE" Divider Style) -->
+      <div class="flex items-center gap-4 sm:gap-6 mb-10">
+        <span class="h-[2px] flex-1 bg-charcoal"></span>
+        <h2 class="font-display uppercase text-3xl sm:text-5xl tracking-wide text-charcoal text-center">
+          MY EXPERIENCE
+        </h2>
+        <span class="h-[2px] flex-1 bg-charcoal"></span>
+      </div>
+
+      <!-- 2x2 Experience Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        
+        <!-- Experience 1 -->
+        <div class="bg-cream rounded-3xl p-6 sm:p-7 border border-charcoal/15 shadow-sm hover:shadow-md transition-shadow flex items-start gap-4 sm:gap-5">
+          <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-charcoal text-cream flex items-center justify-center shrink-0 mt-0.5">
+            <i class="fa-solid fa-school text-lg sm:text-xl"></i>
+          </div>
+          <div>
+            <span class="text-xs font-bold uppercase tracking-widest text-terracotta">Kelas X – XII</span>
+            <h3 class="font-heading font-bold text-xl sm:text-2xl text-charcoal mt-0.5">
+              Tugas Sekolah Jurusan DKV
+            </h3>
+            <p class="text-xs font-semibold text-taupeDark mb-2.5">SMK Negeri 10 Surabaya</p>
+            <ul class="text-sm text-charcoal/85 space-y-1.5 list-disc pl-4">
+              <li>Eksplorasi nirmana manual (titik, zentangle, arsiran still life &amp; shading).</li>
+              <li>Perancangan identitas brand (mind mapping, sketsa hingga final logo) dan desain kaos.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Experience 2 -->
+        <div class="bg-cream rounded-3xl p-6 sm:p-7 border border-charcoal/15 shadow-sm hover:shadow-md transition-shadow flex items-start gap-4 sm:gap-5">
+          <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-charcoal text-cream flex items-center justify-center shrink-0 mt-0.5">
+            <i class="fa-solid fa-users-gear text-lg sm:text-xl"></i>
+          </div>
+          <div>
+            <span class="text-xs font-bold uppercase tracking-widest text-terracotta">Organisasi • @pramukasmkn10sby</span>
+            <h3 class="font-heading font-bold text-xl sm:text-2xl text-charcoal mt-0.5">
+              Koordinator Sie PDD Event Pramuka
+            </h3>
+            <p class="text-xs font-semibold text-taupeDark mb-2.5">Publikasi, Dekorasi &amp; Dokumentasi — GALAKSI 4.0</p>
+            <ul class="text-sm text-charcoal/85 space-y-1.5 list-disc pl-4">
+              <li>Mengkoordinasikan kebutuhan visual, media publikasi, dan dokumentasi acara.</li>
+              <li>Merancang desain tiket acara, twibbon peserta/panitia, serta tiska (badge seragam).</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Experience 3 -->
+        <div class="bg-cream rounded-3xl p-6 sm:p-7 border border-charcoal/15 shadow-sm hover:shadow-md transition-shadow flex items-start gap-4 sm:gap-5">
+          <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-charcoal text-cream flex items-center justify-center shrink-0 mt-0.5">
+            <i class="fa-solid fa-palette text-lg sm:text-xl"></i>
+          </div>
+          <div>
+            <span class="text-xs font-bold uppercase tracking-widest text-terracotta">Komunikasi Visual</span>
+            <h3 class="font-heading font-bold text-xl sm:text-2xl text-charcoal mt-0.5">
+              Desain Poster &amp; Media Publikasi
+            </h3>
+            <p class="text-xs font-semibold text-taupeDark mb-2.5">Kampanye Digital &amp; Peringatan Hari Besar</p>
+            <ul class="text-sm text-charcoal/85 space-y-1.5 list-disc pl-4">
+              <li>Merancang poster digital Hari Kartini dan Hari Raya Idul Adha dengan tipografi ekspresif.</li>
+              <li>Menyusun komposisi warna dan ilustrasi untuk meningkatkan daya tarik di media sosial.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Experience 4 -->
+        <div class="bg-cream rounded-3xl p-6 sm:p-7 border border-charcoal/15 shadow-sm hover:shadow-md transition-shadow flex items-start gap-4 sm:gap-5">
+          <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-charcoal text-cream flex items-center justify-center shrink-0 mt-0.5">
+            <i class="fa-solid fa-cubes text-lg sm:text-xl"></i>
+          </div>
+          <div>
+            <span class="text-xs font-bold uppercase tracking-widest text-terracotta">3D Modeling</span>
+            <h3 class="font-heading font-bold text-xl sm:text-2xl text-charcoal mt-0.5">
+              Membuat Karakter 3D / Bentuk 3D
+            </h3>
+            <p class="text-xs font-semibold text-taupeDark mb-2.5">Eksplorasi Aset &amp; Karakter Kartun</p>
+            <ul class="text-sm text-charcoal/85 space-y-1.5 list-disc pl-4">
+              <li>Pemodelan karakter 3D bergaya kartun (Karakter Orisinal &amp; Doraemon 3D).</li>
+              <li>Pemodelan objek lingkungan seperti Gerobak 3D dengan perhatian pada proporsi dan warna.</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO SHOWCASE SECTION ("MY WORK INCLUDES" — Ref 2 Editorial Bento Grid + Filter + Modal) -->
+  <section id="works" class="py-12 sm:py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8">
+      
+      <!-- Outer Taupe Editorial Frame (Inspired by Ref 2 "MY WORK INCLUDES" Container) -->
+      <div class="bg-taupeLight/75 border border-charcoal/10 rounded-[2.25rem] p-6 sm:p-10 lg:p-12 shadow-xl">
+        
+        <!-- Header & Interactive Filter Tabs -->
+        <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-10">
+          <div>
+            <span class="font-script text-3xl sm:text-4xl text-terracotta block -mb-1">
+              sample projects
+            </span>
+            <h2 class="font-display uppercase text-4xl sm:text-6xl tracking-tight text-charcoal">
+              MY WORK INCLUDES
+            </h2>
+          </div>
+
+          <!-- Filter Buttons -->
+          <div class="flex flex-wrap items-center gap-2.5" role="tablist" aria-label="Filter Karya Portofolio">
+            <button onclick="setFilter('all')" data-filter="all" class="filter-btn active px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold uppercase tracking-wider transition-all bg-charcoal text-cream shadow">
+              Semua Karya (15)
+            </button>
+            <button onclick="setFilter('school')" data-filter="school" class="filter-btn px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold uppercase tracking-wider transition-all bg-cream text-charcoal hover:bg-charcoal hover:text-cream">
+              School Work (10)
+            </button>
+            <button onclick="setFilter('organizational')" data-filter="organizational" class="filter-btn px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold uppercase tracking-wider transition-all bg-cream text-charcoal hover:bg-charcoal hover:text-cream">
+              Organizational Work (5)
+            </button>
+          </div>
+        </div>
+
+        <!-- Projects Grid (Rendered Dynamically from Syaiful's 15 Portfolio Items) -->
+        <div id="projects-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7">
+          <!-- Cards populated via JS -->
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT & PKL FOOTER SECTION ("LET'S WORK TOGETHER" — Ref 2 Contact + PDF Page 14) -->
+  <footer id="contact" class="pt-10 pb-16 sm:pt-16 sm:pb-20 relative overflow-hidden">
+    <!-- Decorative 3D Burnt-Orange Sphere Bottom-Left (Ref 1) -->
+    <svg class="animate-float-slow hidden sm:block absolute bottom-12 -left-8 w-28 h-28 pointer-events-none opacity-90" viewBox="0 0 80 80">
+      <circle cx="40" cy="40" r="34" fill="url(#sphereGrad1)" />
+    </svg>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-8 relative z-10">
+      <div class="bg-charcoal text-cream rounded-[2.5rem] p-8 sm:p-12 lg:p-16 shadow-2xl relative overflow-hidden">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+          <!-- Left: Closing Statement for PKL (PDF Page 14) -->
+          <div class="lg:col-span-7">
+            <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-terracotta text-white text-xs font-bold uppercase tracking-widest mb-4">
+              <i class="fa-solid fa-briefcase"></i> Terbuka Untuk Kesempatan PKL
+            </span>
+            <h2 class="font-display uppercase text-4xl sm:text-6xl lg:text-7xl tracking-tight leading-[0.95] text-cream mb-5">
+              LET’S WORK <span class="text-terracotta">TOGETHER</span>
+            </h2>
+            <p class="text-cream/85 text-sm sm:text-base leading-relaxed max-w-2xl">
+              Terima kasih atas waktu dan perhatian yang telah diberikan. Saya berharap portofolio ini dapat memberikan gambaran mengenai kemampuan yang saya miliki. Saya siap untuk terus belajar, menerima masukan, dan berkembang melalui pengalaman <strong class="text-white">Praktik Kerja Lapangan (PKL)</strong>.
+            </p>
+          </div>
+
+          <!-- Right: Interactive Contact Cards with Copy-to-Clipboard -->
+          <div class="lg:col-span-5 space-y-3.5">
+            <!-- Email Card -->
+            <div class="bg-white/10 hover:bg-white/15 border border-white/10 rounded-2xl p-4 flex items-center justify-between gap-3 transition-colors">
+              <a href="mailto:sayaifulislam16@gmail.com" class="flex items-center gap-3.5 min-w-0">
+                <span class="w-11 h-11 rounded-xl bg-terracotta text-white flex items-center justify-center shrink-0">
+                  <i class="fa-solid fa-envelope text-lg"></i>
+                </span>
+                <div class="truncate">
+                  <div class="text-[11px] uppercase tracking-widest text-cream/65 font-bold">Email Address</div>
+                  <div class="text-sm sm:text-base font-bold text-white truncate">sayaifulislam16@gmail.com</div>
+                </div>
+              </a>
+              <button onclick="copyText('sayaifulislam16@gmail.com', 'Email berhasil disalin!')" title="Salin Email" class="p-2.5 rounded-xl bg-white/10 hover:bg-terracotta text-cream transition-colors shrink-0">
+                <i class="fa-regular fa-copy"></i>
+              </button>
+            </div>
+
+            <!-- Phone / WhatsApp Card -->
+            <div class="bg-white/10 hover:bg-white/15 border border-white/10 rounded-2xl p-4 flex items-center justify-between gap-3 transition-colors">
+              <a href="https://wa.me/6285732117191" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3.5 min-w-0">
+                <span class="w-11 h-11 rounded-xl bg-emerald-600 text-white flex items-center justify-center shrink-0">
+                  <i class="fa-brands fa-whatsapp text-xl"></i>
+                </span>
+                <div class="truncate">
+                  <div class="text-[11px] uppercase tracking-widest text-cream/65 font-bold">Phone / WhatsApp</div>
+                  <div class="text-sm sm:text-base font-bold text-white truncate">+62-857-3211-7191</div>
+                </div>
+              </a>
+              <button onclick="copyText('+62-857-3211-7191', 'Nomor telepon berhasil disalin!')" title="Salin Nomor" class="p-2.5 rounded-xl bg-white/10 hover:bg-terracotta text-cream transition-colors shrink-0">
+                <i class="fa-regular fa-copy"></i>
+              </button>
+            </div>
+
+            <!-- Instagram Card -->
+            <div class="bg-white/10 hover:bg-white/15 border border-white/10 rounded-2xl p-4 flex items-center justify-between gap-3 transition-colors">
+              <a href="https://instagram.com/m.saaiffffff" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3.5 min-w-0">
+                <span class="w-11 h-11 rounded-xl bg-gradient-to-tr from-amber-500 via-pink-600 to-purple-600 text-white flex items-center justify-center shrink-0">
+                  <i class="fa-brands fa-instagram text-xl"></i>
+                </span>
+                <div class="truncate">
+                  <div class="text-[11px] uppercase tracking-widest text-cream/65 font-bold">Instagram</div>
+                  <div class="text-sm sm:text-base font-bold text-white truncate">@m.saaiffffff</div>
+                </div>
+              </a>
+              <button onclick="copyText('@m.saaiffffff', 'Username Instagram disalin!')" title="Salin Username" class="p-2.5 rounded-xl bg-white/10 hover:bg-terracotta text-cream transition-colors shrink-0">
+                <i class="fa-regular fa-copy"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Copyright Bar -->
+        <div class="mt-10 pt-6 border-t border-white/15 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-cream/70">
+          <p>© 2026 <strong class="text-white">Muhamad Syaiful Islam</strong> — Portofolio DKV SMK Negeri 10 Surabaya.</p>
+          <a href="#top" class="inline-flex items-center gap-2 font-bold uppercase tracking-widest text-cream hover:text-terracotta transition-colors">
+            <span>Kembali ke Atas</span>
+            <i class="fa-solid fa-arrow-up"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- PROJECT DETAIL LIGHTBOX MODAL -->
+  <div id="project-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 sm:p-6 bg-charcoal/80 backdrop-blur-sm">
+    <div class="bg-cream border-2 border-charcoal rounded-[2rem] max-w-2xl w-full overflow-hidden shadow-2xl transform transition-all">
+      <!-- Modal Visual Header -->
+      <div id="modal-visual" class="w-full h-60 sm:h-72 bg-taupeLight relative flex items-center justify-center overflow-hidden">
+        <!-- Injected Artwork SVG -->
+      </div>
+      <!-- Modal Content -->
+      <div class="p-6 sm:p-8">
+        <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+          <span id="modal-category" class="px-3.5 py-1 rounded-full bg-terracotta text-white text-xs font-bold uppercase tracking-widest">
+            School Work
+          </span>
+          <span id="modal-tools" class="text-xs font-bold text-taupeDark uppercase tracking-wider">
+            Tools: Adobe Illustrator
+          </span>
+        </div>
+        <h3 id="modal-title" class="font-display uppercase text-3xl sm:text-4xl text-charcoal mb-3">
+          Judul Karya
+        </h3>
+        <p id="modal-desc" class="text-sm sm:text-base text-charcoal/85 leading-relaxed mb-6">
+          Deskripsi lengkap karya.
+        </p>
+        <div class="flex justify-end">
+          <button onclick="closeModal()" class="bg-charcoal text-cream hover:bg-terracotta transition-colors px-6 py-2.5 rounded-full text-xs font-bold uppercase tracking-widest">
+            Tutup Detail
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Vanilla JavaScript: Portfolio Data, Custom Artwork Previews, Filtering & Modal -->
+  <script>
+    // Complete dataset of all 15 works from Muhamad Syaiful Islam's PDF Portfolio
+    const portfolioProjects = [
+      // --- SCHOOL WORK (10 ITEMS) ---
+      {
+        id: 1,
+        category: 'school',
+        categoryLabel: 'School Work • Nirmana',
+        title: 'Nirmana Gorilla Zentangle',
+        tools: 'Manual Ink & Drawing Pen',
+        shortDesc: 'Ilustrasi gorila menggunakan teknik zentangle dengan pola detail yang menciptakan tekstur dan kedalaman visual.',
+        fullDesc: 'Ilustrasi gorila yang dikerjakan menggunakan teknik zentangle manual dengan isian pola garis lengkung, spiral, dan kontras hitam-putih yang sangat detail untuk menciptakan tekstur bulu serta kedalaman dimensi visual.',
+        artwork: `
+          <img src="nirmana-gorilla.png" alt="Nirmana Gorilla Zentangle — Muhamad Syaiful Islam" class="w-full h-full object-cover object-center">
+        `
+      },
+      {
+        id: 2,
+        category: 'school',
+        categoryLabel: 'School Work • Nirmana',
+        title: 'Nirmana Flora Batik',
+        tools: 'Manual Ink & Zentangle Pattern',
+        shortDesc: 'Komposisi motif bunga dan pola abstrak yang disusun harmonis menggunakan teknik zentangle.',
+        fullDesc: 'Eksplorasi komposisi motif flora bernuansa batik yang dipadukan dengan pola dekoratif hitam-putih secara harmonis menggunakan teknik zentangle untuk melatih ketelitian dan keseimbangan bidang.',
+        artwork: `
+          <img src="nirmana-flora-batik.png" alt="Nirmana Flora Batik — Muhamad Syaiful Islam" class="w-full h-full object-cover object-center">
+        `
+      },
+      {
+        id: 3,
+        category: 'school',
+        categoryLabel: 'School Work • Nirmana',
+        title: 'Nirmana Flora Abstrak',
+        tools: 'Manual Ink & Decorative Patterns',
+        shortDesc: 'Ilustrasi bunga abstrak dengan perpaduan pola dekoratif untuk menghasilkan komposisi yang dinamis dan kreatif.',
+        fullDesc: 'Ilustrasi bunga abstrak yang memadukan elemen papan catur, garis ritmis, dan pola daun dekoratif untuk membangun komposisi visual yang dinamis, kontras, dan penuh irama.',
+        artwork: `
+          <img src="bunga.png" alt="Nirmana Flora Abstrak — Muhamad Syaiful Islam" class="w-full h-full object-cover object-center">
+        `
+      },
+      {
+        id: 4,
+        category: 'school',
+        categoryLabel: 'School Work • Seni Rupa Dasar',
+        title: 'Still Life Drawing',
+        tools: 'Pensil Grafit & Arsiran Manual',
+        shortDesc: 'Gambar benda mati menggunakan teknik arsiran untuk menampilkan bentuk, tekstur, dan pencahayaan.',
+        fullDesc: 'Studi gambar bentuk benda mati (teko keramik, kain lipatan, dan buah pisang) menggunakan teknik arsiran bertingkat untuk menangkap proporsi, tekstur permukaan, dan arah jatuhnya cahaya.',
+        artwork: `
+          <img src="lukisan.png" alt="Still Life Drawing — Muhamad Syaiful Islam" class="w-full h-full object-cover object-center">
+        `
+      },
+      {
+        id: 5,
+        category: 'school',
+        categoryLabel: 'School Work • Nirmana',
+        title: 'Nirmana Titik (Pointillism)',
+        tools: 'Drawing Pen & Tinta Hitam',
+        shortDesc: 'Komposisi pola lingkaran dengan teknik titik (dot art) yang menghasilkan keseimbangan dan irama visual.',
+        fullDesc: 'Eksplorasi unsur titik dalam 4 panel nirmana menggunakan gradasi ukuran lingkaran dan kerapatan titik (dot art) untuk menciptakan kesan gerak, ritme, dan keseimbangan komposisi.',
+        artwork: `
+          <img src="titik.png" alt="Nirmana Titik (Pointillism) — Muhamad Syaiful Islam" class="w-full h-full object-cover object-center">
+        `
+      },
+      {
+        id: 6,
+        category: 'school',
+        categoryLabel: 'School Work • Studi Pencahayaan',
+        title: 'Sphere Shading Study',
+        tools: 'Pensil Grafit & Teknik Arsir',
+        shortDesc: 'Studi gelap-terang (value & shadow) pada objek bola dengan variasi skala untuk melatih kesan volume 3D.',
+        fullDesc: 'Latihan dasar pencahayaan dan bayangan (highlight, midtone, core shadow, dan cast shadow) pada tiga objek bola berukuran bertingkat untuk menciptakan ilusi kedalaman tiga dimensi di atas bidang datar.',
+        artwork: `
+          <img src="lingkaran.png" alt="Sphere Shading Study — Muhamad Syaiful Islam" class="w-full h-full object-cover object-center">
+        `
+      },
+      {
+        id: 7,
+        category: 'school',
+        categoryLabel: 'School Work • 3D Modeling',
+        title: 'Karakter 3D & Doraemon 3D',
+        tools: '3D Modeling & Rendering',
+        shortDesc: 'Model karakter 3D bergaya kartun yang dibuat dengan memperhatikan bentuk, proporsi, dan warna.',
+        fullDesc: 'Pemodelan karakter 3D bergaya kartun yang mencakup karakter orisinal dan karakter ikonik Doraemon 3D dengan pengolahan bentuk dasar (primitive sculpting), proporsi ekspresif, serta material warna yang cerah.',
+        artwork: `
+          <img src="doraemon.png" alt="Karakter 3D & Doraemon 3D — Muhamad Syaiful Islam" class="w-full h-full object-cover object-center">
+        `
+      },
+      {
+        id: 8,
+        category: 'school',
+        categoryLabel: 'School Work • 3D Asset',
+        title: 'Gerobak 3D',
+        tools: '3D Modeling & Material Shading',
+        shortDesc: 'Model gerobak 3D dengan detail objek sederhana yang menampilkan kemampuan pemodelan aset.',
+        fullDesc: 'Pemodelan aset lingkungan berupa gerobak dagang 3D lengkap dengan roda, atap pelindung, dan komponen pendukung lainnya untuk melatih presisi konstruksi objek tiga dimensi.',
+        artwork: `
+          <img src="gerobak.png" alt="Gerobak 3D — Muhamad Syaiful Islam" class="w-full h-full object-cover object-center">
+        `
+      },
+      {
+        id: 9,
+        category: 'school',
+        categoryLabel: 'School Work • Ilustrasi & Apparel',
+        title: 'Desain Kaos (Maskot Burung)',
+        tools: 'Adobe Illustrator & Mockup',
+        shortDesc: 'Desain ilustrasi vektor bertema maskot burung dari sketsa digital, pewarnaan, hingga penyusunan mockup pada media kaos.',
+        fullDesc: 'Perancangan ilustrasi vektor maskot burung bergaya esport/streetwear mulai dari tahap sketsa digital, line art tegas, pewarnaan kontras, hingga pengaplikasian pada mockup kaos siap produksi.',
+        artwork: `
+          <img src="baju.png" alt="Desain Kaos (Maskot Burung) — Muhamad Syaiful Islam" class="w-full h-full object-cover object-center">
+        `
+      },
+      {
+        id: 10,
+        category: 'school',
+        categoryLabel: 'School Work • Brand Identity',
+        title: 'Branding Nusantara Coffee',
+        tools: 'Mind Mapping, Sketsa & Adobe Illustrator',
+        shortDesc: 'Perancangan logo Nusantara Coffee dari proses mind mapping, sketsa logo, hingga final logo memadukan biji kopi dan ornamen Nusantara.',
+        fullDesc: 'Proses lengkap perancangan identitas visual brand kedai kopi "Nusantara Coffee" (29-M. Syaiful Islam): diawali dengan mind mapping (kata kunci: Jawa, biji kopi, trend), eksplorasi sketsa manual, hingga finalisasi logo yang menggabungkan bentuk biji kopi dan ornamen tradisional Nusantara.',
+        artwork: `
+          <img src="kopi.png" alt="Branding Nusantara Coffee — Muhamad Syaiful Islam" class="w-full h-full object-cover object-center">
+        `
+      },
+
+      // --- ORGANIZATIONAL WORK (5 ITEMS) ---
+      {
+        id: 11,
+        category: 'organizational',
+        categoryLabel: 'Organizational • @pramukasmkn10sby',
+        title: 'Desain Twibbon GALAKSI 4.0',
+        tools: 'Canva & Adobe Illustrator',
+        shortDesc: 'Desain twibbon digital Peserta & Panitia GALAKSI 4.0 sebagai media publikasi dan branding acara Pramuka SMKN 10 Surabaya.',
+        fullDesc: 'Desain twibbon digital resmi untuk kategori Peserta dan Panitia kegiatan GALAKSI 4.0 (@pramukasmkn10sby). Dirancang dengan bingkai foto yang rapi, warna cerah bertema petualangan, dan tipografi tegas untuk meningkatkan partisipasi di media sosial.',
+        artwork: `
+          <div class="grid grid-cols-2 w-full h-full gap-1 bg-white">
+            <img src="twib-1.png" alt="Twibbon Peserta GALAKSI 4.0 — Muhamad Syaiful Islam" class="w-full h-full object-contain object-center">
+            <img src="twib-2.png" alt="Twibbon Panitia GALAKSI 4.0 — Muhamad Syaiful Islam" class="w-full h-full object-contain object-center">
+          </div>
+        `,
+        plainThumb: true
+      },
+      {
+        id: 12,
+        category: 'organizational',
+        categoryLabel: 'Organizational • @pramukasmkn10sby',
+        title: 'Desain Tiket GALAKSI 4.0',
+        tools: 'Adobe Illustrator & Canva',
+        shortDesc: 'Desain tiket kegiatan GALAKSI 4.0 SMKN 10 Surabaya (16 Mei 2026, Arjuna-Srikandi 08.083-08.084) dengan QR Code registrasi.',
+        fullDesc: 'Desain tiket fisik dan digital untuk event Pramuka GALAKSI 4.0 SMKN 10 Surabaya (16 Mei 2026 — Gudep Arjuna-Srikandi 08.083-08.084). Dilengkapi ilustrasi perkemahan fantasi, area sobekan tiket (stub), serta QR Code untuk mempermudah proses registrasi peserta.',
+        artwork: `
+          <img src="tiket.png" alt="Desain Tiket GALAKSI 4.0 — Muhamad Syaiful Islam" class="w-full h-full object-contain object-center">
+        `,
+        plainThumb: true
+      },
+      {
+        id: 13,
+        category: 'organizational',
+        categoryLabel: 'Organizational • Publikasi',
+        title: 'Poster Hari Raya Idul Adha',
+        tools: 'Canva & Adobe Photoshop',
+        shortDesc: 'Poster digital bertema Hari Raya Idul Adha yang dirancang dengan tata letak, tipografi, dan ilustrasi islami yang menarik.',
+        fullDesc: 'Poster digital ucapan Hari Raya Idul Adha yang memadukan ornamen kubah masjid, tipografi kaligrafi modern, serta komposisi warna hangat untuk memperkuat komunikasi visual organisasi di media sosial.',
+        artwork: `
+          <div class="relative w-full h-full bg-creamDark">
+            <img src="idul-adha.png" alt="" aria-hidden="true" class="absolute inset-0 w-full h-full object-cover scale-110 blur-md opacity-50">
+            <img src="idul-adha.png" alt="Poster Hari Raya Idul Adha — Muhamad Syaiful Islam" class="relative w-full h-full object-contain">
+          </div>
+        `
+      },
+      {
+        id: 14,
+        category: 'organizational',
+        categoryLabel: 'Organizational • Publikasi',
+        title: 'Poster Hari Kartini',
+        tools: 'Canva & Adobe Photoshop',
+        shortDesc: 'Poster digital Selamat Hari Kartini (21 April 2025) memadukan ilustrasi Kartini, wayang, dan peta Nusantara.',
+        fullDesc: 'Poster peringatan Hari Kartini (21 April 2025) dengan pesan inspiratif "Teruslah bersinar perempuan Indonesia, seperti Kartini menerangi zamannya", dipadukan dengan ilustrasi sosok R.A. Kartini dan siluet peta Indonesia.',
+        artwork: `
+          <div class="relative w-full h-full bg-creamDark">
+            <img src="kartini.png" alt="" aria-hidden="true" class="absolute inset-0 w-full h-full object-cover scale-110 blur-md opacity-50">
+            <img src="kartini.png" alt="Poster Hari Kartini — Muhamad Syaiful Islam" class="relative w-full h-full object-contain">
+          </div>
+        `
+      },
+      {
+        id: 15,
+        category: 'organizational',
+        categoryLabel: 'Organizational • Merchandise & Atribut',
+        title: 'Desain Tiska / Badge GALAKSI 4.0',
+        tools: 'Adobe Illustrator',
+        shortDesc: 'Desain badge baju kegiatan GALAKSI 4.0 Se-Jawa Timur yang mengutamakan identitas visual, keterbacaan, dan penerapan pada seragam.',
+        fullDesc: 'Perancangan desain Tanda Ikut Serta Kegiatan (Tiska / Badge Baju) untuk kegiatan Pramuka GALAKSI 4.0 Se-Jawa Timur (16 Mei 2026). Dirancang presisi agar mudah diaplikasikan pada seragam peserta maupun panitia dengan keterbacaan optimal.',
+        artwork: `
+          <img src="tiska.png" alt="Desain Tiska / Badge GALAKSI 4.0 — Muhamad Syaiful Islam" class="w-full h-full object-cover object-center">
+        `
+      }
+    ];
+
+    const gridEl = document.getElementById('projects-grid');
+    const modalEl = document.getElementById('project-modal');
+
+    // Render Project Cards
+    function renderProjects(filter = 'all') {
+      const filtered = filter === 'all'
+        ? portfolioProjects
+        : portfolioProjects.filter(p => p.category === filter);
+
+      gridEl.innerHTML = filtered.map(project => `
+        <article onclick="openModal(${project.id})" class="group cursor-pointer bg-cream rounded-[1.6rem] border border-charcoal/15 overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col">
+          <!-- Visual Thumbnail -->
+          <div class="relative h-52 w-full overflow-hidden bg-creamDark border-b border-charcoal/10">
+            <div class="w-full h-full group-hover:scale-105 transition-transform duration-500">
+              ${project.artwork}
+            </div>
+            ${project.plainThumb ? '' : `
+            <span class="absolute top-3 left-3 px-3 py-1 rounded-full bg-charcoal/85 text-cream text-[10px] font-bold uppercase tracking-wider backdrop-blur-sm">
+              ${project.category === 'school' ? 'School Work' : 'Organizational'}
+            </span>
+            <span class="absolute bottom-3 right-3 w-9 h-9 rounded-full bg-cream text-charcoal group-hover:bg-terracotta group-hover:text-white transition-colors flex items-center justify-center shadow">
+              <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+            </span>
+            `}
+          </div>
+
+          <!-- Card Text -->
+          <div class="p-5 sm:p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="text-[11px] font-bold uppercase tracking-widest text-terracotta mb-1">
+                ${project.categoryLabel}
+              </div>
+              <h3 class="font-heading font-bold text-xl text-charcoal group-hover:text-terracotta transition-colors mb-2">
+                ${project.title}
+              </h3>
+              <p class="text-xs sm:text-sm text-charcoal/80 leading-relaxed line-clamp-3">
+                ${project.shortDesc}
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-charcoal/10 flex items-center justify-between text-[11px] font-bold text-taupeDark">
+              <span>${project.tools}</span>
+              <span class="text-charcoal group-hover:translate-x-1 transition-transform">Lihat Detail →</span>
+            </div>
+          </div>
+        </article>
+      `).join('');
+    }
+
+    // Filter Tab Switcher
+    function setFilter(category) {
+      document.querySelectorAll('.filter-btn').forEach(btn => {
+        if (btn.dataset.filter === category) {
+          btn.classList.remove('bg-cream', 'text-charcoal');
+          btn.classList.add('bg-charcoal', 'text-cream', 'shadow');
+        } else {
+          btn.classList.remove('bg-charcoal', 'text-cream', 'shadow');
+          btn.classList.add('bg-cream', 'text-charcoal');
+        }
+      });
+      renderProjects(category);
+    }
+
+    // Open Lightbox Modal
+    function openModal(id) {
+      const project = portfolioProjects.find(p => p.id === id);
+      if (!project) return;
+
+      document.getElementById('modal-visual').innerHTML = project.artwork;
+      document.getElementById('modal-category').textContent = project.categoryLabel;
+      document.getElementById('modal-tools').textContent = project.tools;
+      document.getElementById('modal-title').textContent = project.title;
+      document.getElementById('modal-desc').textContent = project.fullDesc;
+
+      modalEl.classList.remove('hidden');
+      modalEl.classList.add('flex');
+    }
+
+    // Close Modal
+    function closeModal() {
+      modalEl.classList.add('hidden');
+      modalEl.classList.remove('flex');
+    }
+
+    modalEl.addEventListener('click', (e) => {
+      if (e.target === modalEl) closeModal();
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeModal();
+    });
+
+    // Toast Helper
+    function showToast(msg) {
+      const toast = document.getElementById('toast');
+      document.getElementById('toast-message').textContent = msg;
+      toast.classList.remove('translate-y-24', 'opacity-0');
+      setTimeout(() => {
+        toast.classList.add('translate-y-24', 'opacity-0');
+      }, 2800);
+    }
+
+    // Copy to Clipboard using execCommand fallback (iFrame Safe)
+    function copyText(text, successMsg) {
+      const tempInput = document.createElement('textarea');
+      tempInput.value = text;
+      document.body.appendChild(tempInput);
+      tempInput.select();
+      try {
+        document.execCommand('copy');
+        showToast(successMsg);
+      } catch (err) {
+        showToast('Gagal menyalin teks.');
+      }
+      document.body.removeChild(tempInput);
+    }
+
+    // Mobile Menu Toggle
+    document.getElementById('mobile-menu-btn').addEventListener('click', () => {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+
+    // Custom Portrait Photo Uploader (Lets Syaiful preview his own photo directly in the browser)
+    document.getElementById('photo-upload-input').addEventListener('change', function (event) {
+      const file = event.target.files[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = function (e) {
+        const img = document.getElementById('hero-photo-img');
+        const svgAvatar = document.getElementById('hero-svg-avatar');
+        img.src = e.target.result;
+        img.classList.remove('hidden');
+        svgAvatar.classList.add('hidden');
+        showToast('Foto profil berhasil diperbarui!');
+      };
+      reader.readAsDataURL(file);
+    });
+
+    // Initial Render
+    window.addEventListener('DOMContentLoaded', () => {
+      renderProjects('all');
+    });
+  </script>
+</body>
+</html>

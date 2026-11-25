@@ -1,0 +1,10 @@
+# OS / editor junk
+Thumbs.db
+desktop.ini
+.DS_Store
+.vscode/
+.idea/
+
+# Local-only source files (not used by the website)
+/PORTOFOLIO MUHAMAD SYAIFUL ISLAM*.png
+/Downloads/
