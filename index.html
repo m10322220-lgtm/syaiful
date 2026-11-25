@@ -277,45 +277,8 @@
                 <circle cx="100" cy="115" r="88" fill="url(#halftone)" />
               </svg>
 
-              <!-- Portrait Image (Supports Custom Photo Upload or Styled Editorial SVG Avatar) -->
-              <img id="hero-photo-img" src="" alt="Foto Profil Muhamad Syaiful Islam" class="hidden relative z-10 w-full h-full object-cover object-top" />
-
-              <!-- Default Stylized Vector Portrait Illustration (SMK DKV Student Vibe) -->
-              <div id="hero-svg-avatar" class="relative z-10 w-full h-full flex flex-col items-center justify-end pt-6 px-4">
-                <svg class="w-full h-full max-h-[320px]" viewBox="0 0 260 310" fill="none">
-                  <!-- Shoulders / Uniform Shirt -->
-                  <path d="M36 310C38 250 72 226 130 226C188 226 222 250 224 310H36Z" fill="#FFFFFF" stroke="#181818" stroke-width="3.5" />
-                  <!-- Collar & Tie -->
-                  <path d="M104 226L130 256L156 226" fill="#F6F3EE" stroke="#181818" stroke-width="3" />
-                  <path d="M123 246L137 246L141 310H119L123 246Z" fill="#6E675F" stroke="#181818" stroke-width="2.5" />
-                  <!-- Merah Putih Badge on Pocket -->
-                  <rect x="76" y="256" width="22" height="7" rx="1.5" fill="#D94E1F" stroke="#181818" stroke-width="1.5" />
-                  <rect x="76" y="263" width="22" height="7" rx="1.5" fill="#FFFFFF" stroke="#181818" stroke-width="1.5" />
-                  <!-- Neck -->
-                  <path d="M111 188H149V232C149 240 111 240 111 232V188Z" fill="#D89B74" stroke="#181818" stroke-width="3" />
-                  <!-- Ears -->
-                  <ellipse cx="83" cy="144" rx="9" ry="15" fill="#D89B74" stroke="#181818" stroke-width="3" />
-                  <ellipse cx="177" cy="144" rx="9" ry="15" fill="#D89B74" stroke="#181818" stroke-width="3" />
-                  <!-- Face -->
-                  <path d="M86 122C86 92 174 92 174 122V152C174 184 152 202 130 202C108 202 86 184 86 152V122Z" fill="#E3A882" stroke="#181818" stroke-width="3.5" />
-                  <!-- Hair -->
-                  <path d="M82 128C78 96 96 72 132 72C168 72 182 96 178 128C174 110 162 102 146 104C132 106 116 102 102 106C90 110 85 118 82 128Z" fill="#181818" />
-                  <!-- Eyes & Smile -->
-                  <circle cx="110" cy="140" r="4.5" fill="#181818" />
-                  <circle cx="150" cy="140" r="4.5" fill="#181818" />
-                  <path d="M100 129C106 125 114 125 119 128" stroke="#181818" stroke-width="3" stroke-linecap="round" />
-                  <path d="M141 128C146 125 154 125 160 129" stroke="#181818" stroke-width="3" stroke-linecap="round" />
-                  <path d="M130 144V158L125 161" stroke="#181818" stroke-width="2.5" stroke-linecap="round" />
-                  <path d="M115 173C124 181 136 181 145 173" stroke="#181818" stroke-width="3" stroke-linecap="round" />
-                </svg>
-              </div>
-
-              <!-- Interactive Photo Upload Overlay Button (Lets Syaiful drop his real photo anytime!) -->
-              <label for="photo-upload-input" title="Ganti dengan foto asli Anda" class="cursor-pointer absolute top-3 right-3 z-20 bg-charcoal/85 hover:bg-terracotta text-cream text-[11px] font-bold px-3 py-1.5 rounded-full backdrop-blur-sm transition-colors flex items-center gap-1.5 shadow">
-                <i class="fa-solid fa-camera"></i>
-                <span>Ganti Foto</span>
-              </label>
-              <input id="photo-upload-input" type="file" accept="image/*" class="hidden" />
+              <!-- Portrait Photo -->
+              <img id="hero-photo-img" src="foto-baju-jurusan.jpeg" alt="Foto Profil Muhamad Syaiful Islam" class="relative z-10 w-full h-full object-cover object-top" />
 
               <!-- Floating Software Mini Badges at Bottom of Portrait (PDF Page 2 Detail) -->
               <div class="absolute bottom-3 inset-x-3 z-20 flex items-center justify-center gap-2">
@@ -1071,22 +1034,6 @@
     // Mobile Menu Toggle
     document.getElementById('mobile-menu-btn').addEventListener('click', () => {
       document.getElementById('mobile-menu').classList.toggle('hidden');
-    });
-
-    // Custom Portrait Photo Uploader (Lets Syaiful preview his own photo directly in the browser)
-    document.getElementById('photo-upload-input').addEventListener('change', function (event) {
-      const file = event.target.files[0];
-      if (!file) return;
-      const reader = new FileReader();
-      reader.onload = function (e) {
-        const img = document.getElementById('hero-photo-img');
-        const svgAvatar = document.getElementById('hero-svg-avatar');
-        img.src = e.target.result;
-        img.classList.remove('hidden');
-        svgAvatar.classList.add('hidden');
-        showToast('Foto profil berhasil diperbarui!');
-      };
-      reader.readAsDataURL(file);
     });
 
     // Initial Render
